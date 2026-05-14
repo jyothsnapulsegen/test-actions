@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "This runs every 5 minutes!"
+      - run: echo "This runs every day !"
