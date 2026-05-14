@@ -1,0 +1,33 @@
+name: Real Multi Job Failure
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Installing dependencies"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Running tests"
+
+      - name: Start Application
+        run: npm start
+
+  deploy:
+    needs:
+      - install
+      - test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Deploying application"
