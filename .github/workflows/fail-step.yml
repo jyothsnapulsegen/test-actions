@@ -1,0 +1,21 @@
+name: Real Failure Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message
+        run: echo "Starting workflow"
+
+      - name: Read Missing File
+        run: cat file-that-does-not-exist.txt
+
+      - name: Final Step
+        run: echo "final step"
