@@ -1,1 +1,8 @@
-name: Hello World on: [push] jobs: greet: runs-on: ubuntu-latest steps: - run: echo "I am a robot!" - run: echo "Running on $(uname -a)" - run: echo "Done!"
+name: Hello World
+on: [push]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I am a robot!"
+      - run: echo "Done!"
